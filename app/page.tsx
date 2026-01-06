@@ -4,23 +4,28 @@ import { experiences } from "../data/experience";
 import { ProjectCard } from "../components/ProjectCard";
 import { projects } from "../data/project";
 import Link from "next/link";
+import { ContactButton } from "../components/ContactButton";
+import { contactLinks } from "../data/contact";
+import { NavBar } from "../components/NavBar";
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="home" id="top">
       <Introduction />
 
-      <div className="social-media">
-
+      <div className="contact-information">
+        {contactLinks.map((contact) => (
+          <ContactButton key={contact.label} contact={contact} />
+        ))}
       </div>
 
-      <div className="experiences">
+      <div className="experiences" id="experiences">
         {experiences.map((experience) => (
           <ExperienceCard key={experience.company_name} experience={experience} />
         ))}
       </div>
 
-      <div className="projects">
+      <div className="projects" id="projects">
         {projects.map((project) => (
           <ProjectCard key={project.project_url} project={project} />
         ))}        
@@ -32,8 +37,8 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="nav-bar"></div>
-
+      <NavBar />
+      
       <div className="toggle-dark-light-mode"></div>
     </div>
   );
