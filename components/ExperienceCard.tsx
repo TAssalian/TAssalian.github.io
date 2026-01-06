@@ -15,14 +15,12 @@ export function ExperienceCard({experience} : ExperienceProps) {
         company_name,
         company_url,
         title,
-        year,
         location,
         description
     } = experience;
     
     return (
         <div className="experience">
-            <p className="experience-year">{year}</p>
             <h3 className="experience-title">{title}</h3>
             <div className="experience-company">
                 <a href={company_url} target="_blank" rel="noreferrer">

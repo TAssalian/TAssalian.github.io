@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# Node
+node_modules/
+
 # next.js
 /.next/
 /out/
@@ -39,3 +42,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Builds
+dist/
+build/
+
+# OS
+.DS_Store

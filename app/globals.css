@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f0e8;
+  --foreground: #0b0b0b;
+  --muted: #4d4d4d;
+  --border: #d9d2c6;
+  --accent: #0b0b0b;
 }
 
 @theme inline {
@@ -12,15 +15,229 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.theme-dark {
+  --background: #0b1220;
+  --foreground: #f5f7fb;
+  --muted: #b2bdd1;
+  --border: #1f2a3b;
+  --accent: #f5f7fb;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 1.55;
+}
+
+.home {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 32px 80px;
+  text-align: left;
+}
+
+.nav-bar {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav-bar a:hover {
+  color: var(--accent);
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.intro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.contact-information {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.contact-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.description h3 {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.experiences {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.projects {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.about-this-website-link {
+  margin-top: 24px;
+}
+
+.footer-actions {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--foreground);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.experience,
+.project {
+  padding: 20px 0;
+}
+
+.experience-location {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-title,
+.project-name a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.experience-company a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.experience-company a:hover,
+.project-name a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.project-tools {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.section-title {
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.year-group {
+  display: flex;
+  gap: 24px;
+}
+
+.year-group + .year-group {
+  margin-top: 12px;
+}
+
+.year-label {
+  min-width: 64px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.year-items {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .home {
+    padding: 48px 20px 64px;
+  }
+
+  .intro-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-bar {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .year-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

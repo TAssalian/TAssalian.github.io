@@ -13,14 +13,12 @@ export function ProjectCard({project} : ProjectProps) {
     const {
         project_name,
         project_url,
-        year,
         description,
         tools
     } = project;
     
     return (
         <div className="project">
-             <p className="project-year">{year}</p>
             <div className="project-name">
                 <a href={project_url} target="_blank" rel="noreferrer">
                     {project_name}

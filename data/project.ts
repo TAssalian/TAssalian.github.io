@@ -11,7 +11,7 @@ export const projects: Project[] = [
     {
         project_name: "TalentBase",
         project_url: "null2",
-        year: "2025",
+        year: "2024",
         description: "Full-stack web application using AWS tools and hosting, Spring Boot and React.",
         tools: ["AWS", "Java", "Spring Boot", "React", "Docker", "PostgreSQL"],
     },
