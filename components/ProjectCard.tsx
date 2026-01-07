@@ -24,7 +24,7 @@ export function ProjectCard({project} : ProjectProps) {
                     {project_name}
                 </a>
             </div>
-            <p className="project-description">{description}</p>
+            <p style={{ whiteSpace: "pre-line" }} className="project-description">{description}</p>
             <p className="project-tools">{tools}</p>
         </div>
     )
