@@ -1,15 +1,13 @@
-import type { ReactNode } from "react";
-
 export type Contact = {
   label: string;
   href: string;
-  icon: ReactNode;
+  kind: "linkedin" | "github" | "email" | "resume";
   download?: boolean | string;
 };
 
 export const contactLinks: Contact[] = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/thomasassalian", icon: "LI" },
-  { label: "GitHub", href: "https://github.com/TAssalian", icon: "GH" },
-  { label: "Email", href: "mailto:tom.assalian@gmail.com", icon: "@" },
-  { label: "Resume", href: "/resume.pdf", icon: "CV", download: "Thomas-Assalian-Resume.pdf" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/thomasassalian", kind: "linkedin" },
+  { label: "GitHub", href: "https://github.com/TAssalian", kind: "github" },
+  { label: "Email", href: "mailto:tom.assalian@gmail.com", kind: "email" },
+  { label: "Resume", href: "/resume.pdf", kind: "resume", download: "Thomas-Assalian-Resume.pdf" },
 ];

@@ -96,7 +96,89 @@ body {
 
 .contact-button:hover {
   border-color: var(--accent);
+}
+
+.contact-button--icon {
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.contact-button--icon .contact-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.contact-button--linkedin {
+  color: #0a66c2;
+}
+
+.contact-button--github {
+  color: #111111;
+}
+
+.contact-button--linkedin:hover {
+  color: #0a66c2;
+}
+
+.contact-button--github:hover {
+  color: #111111;
+}
+
+.contact-button--email:hover {
+  color: #e06a2c;
+}
+
+.theme-dark .contact-button--github {
+  color: #f5f7fb;
+}
+
+.theme-dark .contact-button--github:hover {
+  color: #f5f7fb;
+}
+
+.contact-button--resume {
+  width: auto;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.contact-button--resume:hover {
   color: var(--accent);
+}
+
+.contact-button--resume .contact-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.contact-button--resume .contact-icon {
+  width: 14px;
+  height: 14px;
 }
 
 .description h3 {
@@ -141,8 +223,15 @@ body {
 }
 
 .theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--border);
+}
+
+.theme-toggle--dark:hover .theme-icon {
+  color: #f4c542;
+}
+
+.theme-toggle--light:hover .theme-icon {
+  color: #0b1220;
 }
 
 .theme-icon {
