@@ -9,7 +9,7 @@ export const projects: Project[] = [
         tools: ["Python", "LangChain", "MongoDB", "Docker", "Redis", "Google Gemini", "CSS"],
     },
     {
-        project_name: "Scheduling Assistant",
+        project_name: "AI Scheduling Assistant",
         project_url: "https://github.com/TAssalian/scheduling-assistant",
         year: "2024",
         description: "An AI agent web application that allows for event creation inside of Google Calendar using natural speech",

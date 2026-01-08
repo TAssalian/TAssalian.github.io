@@ -73,6 +73,10 @@ body {
   gap: 24px;
 }
 
+.name {
+  font-size: 30px;
+}
+
 .contact-information {
   display: flex;
   align-items: center;
@@ -150,7 +154,7 @@ body {
 }
 
 .contact-button--email:hover {
-  color: #e06a2c;
+  color: rgb(233, 122, 142);
 }
 
 .theme-dark .contact-button--github {
@@ -246,21 +250,25 @@ body {
 
 .experience-location {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.experience-title,
-.project-name a {
+.experience .experience-title,
+.project .project-name a {
   color: var(--foreground);
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .experience-company a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .experience-company a:hover,
@@ -273,8 +281,13 @@ body {
   font-size: 12px;
 }
 
-.section-title {
+.experience-description,
+.project-description {
   font-size: 14px;
+}
+
+.section-title {
+  font-size: 19px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -292,8 +305,9 @@ body {
 
 .year-label {
   min-width: 64px;
-  color: var(--muted);
-  font-size: 12px;
+  color: rgb(233, 122, 142);
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }

@@ -38,10 +38,10 @@ export default function Home() {
         {Array.from(experiencesByYear.entries()).map(([year, items]) => (
           <div className="year-group" key={`experience-${year}`}>
             <div className="year-label">{year}</div>
-            <div className="year-items">
-              {items.map((experience) => (
-                <ExperienceCard key={experience.company_name} experience={experience} />
-              ))}
+              <div className="year-items">
+                  {items.map((experience) => (
+                  <ExperienceCard key={experience.company_name} experience={experience} />
+                ))}
             </div>
           </div>
         ))}
@@ -52,10 +52,10 @@ export default function Home() {
         {Array.from(projectsByYear.entries()).map(([year, items]) => (
           <div className="year-group" key={`project-${year}`}>
             <div className="year-label">{year}</div>
-            <div className="year-items">
-              {items.map((project) => (
-                <ProjectCard key={project.project_url} project={project} />
-              ))}
+              <div className="year-items">              
+                {items.map((project) => (
+                  <ProjectCard key={project.project_url} project={project} />
+                ))}
             </div>
           </div>
         ))}        
