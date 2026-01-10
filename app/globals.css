@@ -277,8 +277,25 @@ body {
 }
 
 .project-tools {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tool {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.theme-dark .project-tool {
+  background: rgba(245, 247, 251, 0.08);
 }
 
 .experience-description,

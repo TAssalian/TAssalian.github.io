@@ -25,7 +25,13 @@ export function ProjectCard({project} : ProjectProps) {
                 </a>
             </div>
             <p style={{ whiteSpace: "pre-line" }} className="project-description">{description}</p>
-            <p className="project-tools">{tools}</p>
+            <div className="project-tools">
+                {tools.map((tool) => (
+                    <span className="project-tool" key={`${project_name}-${tool}`}>
+                        {tool}
+                    </span>
+                ))}
+            </div>
         </div>
     )
 }
