@@ -13,7 +13,7 @@ export const projects: Project[] = [
         project_url: "https://github.com/TAssalian/scheduling-assistant",
         year: "2024",
         description: "An AI agent web application that allows for event creation inside of Google Calendar using natural speech",
-        tools: ["React", "Google Gemini", "Web Speech", "Google Calendar"],
+        tools: ["React", "Google Gemini", "Supabase Auth", "Web Speech", "Google Calendar"],
     },
     {
         project_name: "TalentBase",
