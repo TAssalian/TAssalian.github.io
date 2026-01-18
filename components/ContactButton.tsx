@@ -16,8 +16,9 @@ export function ContactButton({contact} : ContactProps) {
   } = contact;
   
   const isExternal = href.startsWith("http://") || href.startsWith("https://");
-  const target = isExternal ? "_blank" : undefined;
-  const rel = isExternal ? "noreferrer" : undefined;
+  const openInNewTab = isExternal || kind === "resume";
+  const target = openInNewTab ? "_blank" : undefined;
+  const rel = openInNewTab ? "noreferrer" : undefined;
   const isResume = kind === "resume";
 
   const icon = (() => {

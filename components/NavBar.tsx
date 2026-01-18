@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export function NavBar() {
   return (
     <nav className="nav-bar" aria-label="Primary">
-      <a href="#top">top</a>
-      <a href="#experiences">work</a>
-      <a href="#projects">projects</a>
+      <Link href="/">home</Link>
+      <Link href="/work">work experience</Link>
+      <Link href="/projects">projects</Link>
     </nav>
   );
 }
