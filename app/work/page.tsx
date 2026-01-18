@@ -21,7 +21,7 @@ export default function WorkPage() {
       <Introduction contacts={contactLinks} />
 
       <div className="experiences" id="experiences">
-        <h2 className="section-title">Work</h2>
+        <h2 className="section-title">Work Experience</h2>
         {Array.from(experiencesByYear.entries()).map(([year, items]) => (
           <div className="year-group" key={`experience-${year}`}>
             <div className="year-label">{year}</div>
