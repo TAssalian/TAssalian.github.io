@@ -27,14 +27,6 @@ export default function WorkPage() {
             <div className="year-label">{year}</div>
             {items.map((experience) => (
               <div className="year-row" key={`${year}-${experience.company_name}`}>
-                <div className="year-logo">
-                  {experience.logo_src ? (
-                    <img
-                      src={experience.logo_src}
-                      alt={`${experience.company_name} logo`}
-                    />
-                  ) : null}
-                </div>
                 <div className="year-item">
                   <ExperienceCard experience={experience} />
                 </div>

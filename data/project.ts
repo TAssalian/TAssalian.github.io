@@ -6,7 +6,7 @@ export const projects: Project[] = [
         project_url: "https://github.com/TAssalian/compiler",
         year: "2025",
         description: [
-            "Currently contains the compiler front-end only, implementing a lexer + token generation system for a custom language, \
+            "Currently contains the compiler front-end only (a lexer + token generation system) for a custom language, \
             producing standardized token streams for parsing.",
             "Includes validation rules + error reporting for malformed lexemes, reserved word misuse, and invalid identifiers."
         ],
