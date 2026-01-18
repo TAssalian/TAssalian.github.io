@@ -500,12 +500,13 @@ body {
 
   .intro-image-grid {
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 12px;
   }
 
   .intro-image {
-    width: min(45vw, 180px);
+    width: calc(50% - 6px);
+    max-width: 180px;
   }
 
   .experience {
