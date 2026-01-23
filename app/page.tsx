@@ -15,7 +15,7 @@ export default function Home() {
           <br/>
           <h3>Previously, I interned at UKG, where I developed AI agent and RAG-powered web applications, and at Alstom, where I built Python data pipelines to extract, transform, and deliver insights through dashboards.</h3>
           <br/>
-          <h3>I'm currently looking to deepen my backend engineering experience while continuing to explore new areas of software development. </h3>
+          <h3>I'm currently looking to deepen my backend engineering experience and to continue exploring new areas of software development. </h3>
           <br/>
           <h3>📥 If you would like to reach out, feel free to contact me via LinkedIn or email tom.assalian@gmail.com.</h3>
         </div>
