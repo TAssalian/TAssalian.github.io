@@ -11,9 +11,13 @@ export default function Home() {
       <div className="intro-details">
         <h2 className="section-title">Home</h2>
         <div className="description">
-          <h3>I'm a software engineering student with 3+ years of experience across coding, software engineering, and artificial intelligence. I have a passion for backend engineering, LLM-based systems, mathematics, theoretical computer science, and lifelong learning. I have previous experience at UKG, Alstom and TELUS.</h3>
-          <br></br>
-          <h3>If you would like to reach out, feel free to contact me via any of my contact information above.</h3>
+          <h3>🌱 I'm a 3rd-year Computer Science student at Concordia University with 2+ years of experience spanning across software engineering and AI. I'm especially passionate about backend engineering, web applications, and building LLM-based systems.</h3>  
+          <br/>
+          <h3>Previously, I interned at UKG, where I developed AI agent and RAG-powered web applications, and at Alstom, where I built Python data pipelines to extract, transform, and deliver insights through dashboards.</h3>
+          <br/>
+          <h3>I'm currently looking to deepen my backend engineering experience while continuing to explore new areas of software development. </h3>
+          <br/>
+          <h3>📥 If you would like to reach out, feel free to contact me via LinkedIn or email tom.assalian@gmail.com.</h3>
         </div>
         <div className="intro-image-grid">
           <img
