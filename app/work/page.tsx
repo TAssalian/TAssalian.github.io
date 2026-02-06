@@ -22,18 +22,20 @@ export default function WorkPage() {
 
       <div className="experiences" id="experiences">
         <h2 className="section-title">Work Experience</h2>
-        {Array.from(experiencesByYear.entries()).map(([year, items]) => (
-          <div className="year-group" key={`experience-${year}`}>
-            <div className="year-label">{year}</div>
-            {items.map((experience) => (
-              <div className="year-row" key={`${year}-${experience.company_name}`}>
-                <div className="year-item">
-                  <ExperienceCard experience={experience} />
+        <div className="timeline">
+          {Array.from(experiencesByYear.entries()).map(([year, items]) => (
+            <div className="year-group" key={`experience-${year}`}>
+              <div className="year-label">{year}</div>
+              {items.map((experience) => (
+                <div className="year-row" key={`${year}-${experience.company_name}`}>
+                  <div className="year-item">
+                    <ExperienceCard experience={experience} />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="footer-actions">
