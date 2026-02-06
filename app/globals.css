@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f0e8;
-  --foreground: #0b0b0b;
+  --background: #ffffff;
+  --foreground: #000000;
   --muted: #4d4d4d;
   --border: #d9d2c6;
   --accent: #0b0b0b;
@@ -16,24 +16,37 @@
 }
 
 .theme-dark {
-  --background: #0b1220;
-  --foreground: #f5f7fb;
+  --background: #000000;
+  --foreground: #ffffff;
   --muted: #b2bdd1;
   --border: #1f2a3b;
   --accent: #f5f7fb;
 }
 
+html,
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-opensans), sans-serif;
   font-size: 17px;
   letter-spacing: 0.01em;
   line-height: 1.55;
+  min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-merriweather), serif;
+}
+
+
+
 .home {
-  max-width: 1200px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 64px 32px 80px;
   text-align: left;
@@ -75,18 +88,19 @@ body {
 
 .intro-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
 }
 
 .name {
   font-size: 36px;
+  font-family: var(--font-merriweather), serif;
 }
 
 .name-subtitle {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -96,6 +110,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-top: 10px;
 }
 
 .contact-button {
@@ -213,9 +228,13 @@ body {
   height: 14px;
 }
 
-.description h3 {
-  font-weight: 500;
+.description p {
+  font-weight: 400;
   color: var(--muted);
+}
+
+.description p+p {
+  margin-top: 16px;
 }
 
 .description {
@@ -357,7 +376,8 @@ body {
   color: var(--foreground);
   text-decoration: none;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-merriweather), serif;
 }
 
 .project-name a {
@@ -411,8 +431,7 @@ body {
 }
 
 .experience-company a:hover,
-.project-name a:hover {
-}
+.project-name a:hover {}
 
 .project-tools {
   margin-top: 5px;
@@ -444,8 +463,8 @@ body {
   list-style: disc;
 }
 
-.experience-description li + li,
-.project-description li + li {
+.experience-description li+li,
+.project-description li+li {
   margin-top: 4px;
 }
 
@@ -460,6 +479,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--muted);
+  font-family: var(--font-opensans), sans-serif;
 }
 
 .year-group {
@@ -468,7 +488,7 @@ body {
   gap: 12px;
 }
 
-.year-group + .year-group {
+.year-group+.year-group {
   margin-top: 12px;
 }
 
@@ -484,8 +504,7 @@ body {
   display: block;
 }
 
-.year-item {
-}
+.year-item {}
 
 @media (max-width: 640px) {
   .home {
