@@ -22,16 +22,23 @@ export default function ProjectsPage() {
 
       <div className="projects" id="projects">
         <h2 className="section-title">Projects</h2>
-        {Array.from(projectsByYear.entries()).map(([year, items]) => (
-          <div className="year-group" key={`project-${year}`}>
-            <div className="year-label">{year}</div>
-            <div className="year-items">
-              {items.map((project) => (
-                <ProjectCard key={project.project_url} project={project} />
+        <div className="timeline">
+          {Array.from(projectsByYear.entries()).map(([year, items]) => (
+            <div className="year-group" key={`project-${year}`}>
+              <div className="year-label">{year}</div>
+              {items.map((project, index) => (
+                <div className="year-row" key={`${year}-${project.project_name}`}>
+                  <div className="year-item">
+                    <ProjectCard
+                      key={project.project_url}
+                      project={project}
+                    />
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="footer-actions">
